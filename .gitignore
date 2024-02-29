@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.xml
 *.csv
 *.json
 .DS_Store
