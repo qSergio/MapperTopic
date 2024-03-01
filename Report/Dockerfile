@@ -7,8 +7,9 @@ WORKDIR /home/jovyan/code
 ADD requirements.txt /home/jovyan/code/
 RUN \
     #apt-get update && \
-    pip install --upgrade pip && \
-    pip install -r requirements.txt --no-cache-dir
+    #pip install --upgrade pip && \
+    pip install -r requirements.txt --no-cache-dir &&\
+    python -m spacy download en_core_web_sm
 # RUN pip install pandas numpy matplotlib plotly
 # Switch back to jovyan to avoid accidental container runs as root
 WORKDIR /home/jovyan
